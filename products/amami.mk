@@ -4,6 +4,10 @@ $(call inherit-product, vendor/aicp/configs/common.mk)
 # Inherit telephony stuff
 $(call inherit-product, vendor/aicp/configs/telephony.mk)
 
+# Inherit GSM telephony parts
+PRODUCT_PROPERTY_OVERRIDES += telephony.lteOnGSMDevice=1
+$(call inherit-product, vendor/aicp/configs/gsm.mk)
+
 # Enhanced NFC
 $(call inherit-product, vendor/aicp/configs/nfc_enhanced.mk)
 
